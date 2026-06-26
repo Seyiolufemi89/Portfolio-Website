@@ -4,9 +4,9 @@
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
+  --accent: #9c2808;
+  --accent-bg: rgba(223, 120, 9, 0.1);
+  --accent-border: rgba(191, 36, 36, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
@@ -96,12 +96,16 @@ p {
 }
 
 code,
-.counter {
+
+.front code {
   font-family: var(--mono);
-  display: inline-flex;
+  color: var(--accent);
   border-radius: 4px;
-  color: var(--text-h);
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  width: fit-content;
 }
+
 
 code {
   font-size: 15px;
