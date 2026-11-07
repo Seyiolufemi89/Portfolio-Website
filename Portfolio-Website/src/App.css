@@ -15,3 +15,13 @@
   height: 200px;
 
 }
+
+#Header-button {
+  background-color: var(--bg);
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  height: auto;
+  width: auto;
+}
