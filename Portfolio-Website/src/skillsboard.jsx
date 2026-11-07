@@ -1,7 +1,7 @@
-function skillsboard() {
+function Skillsboard() {
   return (
     <div className="skillsboard">
-      <h1>Programming Skills</h1>
+      <h1>Programming Skills:</h1>
       <ul>
         <li>JavaScript</li>
         <li>Python</li>
@@ -14,4 +14,4 @@ function skillsboard() {
   );
 }
 
-export default skillsboard;
+export default Skillsboard;
