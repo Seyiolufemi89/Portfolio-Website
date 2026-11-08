@@ -25,3 +25,33 @@
   height: auto;
   width: auto;
 }
+
+.skillsboard {
+  background-color: var(--bg);
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  padding: 32px;
+  margin: 32px 0;
+  height: auto;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  min-height: 56px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  background-color: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}

@@ -15,7 +15,9 @@ function App() {
       <div className="App">
         <Front />
         <Profile />
+        <div className = "skills column">
         <Skillsboard />
+        </div>
       </div>
     </>
   );
