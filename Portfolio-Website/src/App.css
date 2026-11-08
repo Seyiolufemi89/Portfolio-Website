@@ -9,11 +9,12 @@
 }
 
 #PFP {
-  border-radius: 100px;
+  border-radius: 12px;
   box-shadow: var(--shadow);
   width: 200px;
-  height: 200px;
-
+  height: 250px;
+  object-fit: cover;
+  image-rendering: pixelated;
 }
 
 #Header-button {
@@ -35,23 +36,102 @@
   height: auto;
 }
 
-.skills-list {
+.skills-marquee {
+  overflow: hidden;
+  padding: 14px 0;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 4%,
+    #000 96%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 4%,
+    #000 96%,
+    transparent
+  );
+}
+
+.skills-marquee-track {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
+  width: max-content;
+  animation: skills-marquee-scroll 32s linear infinite;
+}
+
+.skills-marquee-group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.skills-marquee:hover .skills-marquee-track,
+.skills-marquee:focus-within .skills-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes skills-marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .skill-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 140px;
-  min-height: 56px;
-  padding: 12px 20px;
+  min-width: 150px;
+  min-height: 64px;
+  padding: 12px 22px;
   box-sizing: border-box;
-  background-color: var(--accent-bg);
-  border: 1px solid var(--accent-border);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+  color: #e6ffff;
+  background-color: #101020;
+  border: 1px solid #45f3ff;
+  border-radius: 10px;
+  box-shadow:
+    0 0 6px #45f3ff,
+    inset 0 0 8px rgba(69, 243, 255, 0.2);
+  gap: 12px;
+  text-shadow: 0 0 8px #45f3ff;
+  transition:
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.skill-card:hover {
+  border-color: #ff65e5;
+  box-shadow:
+    0 0 8px #45f3ff,
+    0 0 18px rgba(255, 101, 229, 0.75),
+    inset 0 0 10px rgba(69, 243, 255, 0.25);
+}
+
+.skill-card img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-marquee {
+    overflow: visible;
+    mask-image: none;
+  }
+
+  .skills-marquee-track {
+    width: auto;
+    animation: none;
+  }
+
+  .skills-marquee-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skills-marquee-group[aria-hidden='true'] {
+    display: none;
+  }
 }

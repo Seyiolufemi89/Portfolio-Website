@@ -1,10 +1,10 @@
 
-import profilePic from './assets/IMG_0046.JPEG';
+import profilePic from './assets/pixel-avatar-poses.gif';
 
 function Profile() {
     return(
         <div className="profile">
-            <img src={profilePic} alt="profile pic" id="PFP"></img>
+            <img src={profilePic} alt="Animated pixel-art profile portrait" id="PFP" />
         </div>
     )
 }
